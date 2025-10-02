@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Learn Spring Boot",
   description: "A comprehensive guide to Spring Boot fundamentals, best practices, and practical examples for building enterprise applications.",
+  base: '/spring-boot-learn/',
   themeConfig: {
     logo: '/logo.svg',
     // https://vitepress.dev/reference/default-theme-config
