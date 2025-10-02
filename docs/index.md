@@ -3,23 +3,25 @@
 layout: home
 
 hero:
-  name: "spring-boot-learn"
-  text: "Spring boot learn doc"
-  tagline: My great project tagline
+  name: "Spring Boot Tutorial"
+  text: "Master Spring Boot Development"
+  tagline: A comprehensive guide to building modern Java applications
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /pages/overview
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/rajratnamaitry/spring-boot-learn
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Core Concepts
+    details: Learn Spring Boot fundamentals, dependency injection, auto-configuration, and application properties
+  - title: REST APIs
+    details: Build robust RESTful services with Spring Boot, including validation, error handling, and documentation
+  - title: Database Integration
+    details: Master Spring Data JPA, handle transactions, and work with multiple databases
+  - title: Security
+    details: Implement authentication, authorization, and secure your Spring Boot applications
 ---
 
