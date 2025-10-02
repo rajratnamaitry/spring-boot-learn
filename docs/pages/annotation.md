@@ -22,10 +22,10 @@
 - [`@Value`](./overview.html#application-properties)
 
 ## JPA Annotations
-- [`@Entity`](./database.html#entity)
-- [`@Table`](./database.html#entity)
-- [`@Id`](./database.html#entity)
-- [`@GeneratedValue`](./database.html#entity)
+- [`@Entity`]
+- [`@Table`]
+- [`@Id`]
+- [`@GeneratedValue`]
 
 :::tip
 Click on any annotation to see detailed documentation and examples

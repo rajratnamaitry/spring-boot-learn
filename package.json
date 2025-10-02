@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
+    "deploy": "npm run build && gh-pages -d docs/.vitepress/dist -b gh-pages",
     "preview": "vitepress preview docs"
   }
 }
