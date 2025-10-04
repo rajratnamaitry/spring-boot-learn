@@ -240,6 +240,16 @@ spring.security.user.password=tiger
   logging.level.org.hibernate.orm.jdbc.bind=trace
   ```
 
+## HTTP response status code
+
+|Range | Description|
+|--|--|
+|100-199| info |
+|200-299| success |
+|300-399| redirect |
+|400-499| client error |
+|500-599| server error |
+
 ## WARNING
 
 Do not use src/main/webapp directory if your application is packaged as a JAR. it is silently ignored by most build tools if you generate a JAR.

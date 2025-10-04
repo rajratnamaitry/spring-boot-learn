@@ -28,7 +28,7 @@ public class MyKartApplication {
             // this.updateStudent(studentDAO, 2);
             // this.deleteStudent(studentDAO, 3);
             // this.deleteAllStudents(studentDAO);
-            this.createMultipleStudents(studentDAO);
+            // this.createMultipleStudents(studentDAO);
         };
     };
     private void createMultipleStudents(StudentDao studentDAO) {

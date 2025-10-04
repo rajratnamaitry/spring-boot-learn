@@ -17,6 +17,8 @@ outline: deep
 
 - [`@RestController`](./restController.html)
 - [`@GetMapping`](./restController.html#get-mapping)
+- [`@RequestMapping`](./restController.html#request-mapping)
+- [`@PathVariable`](./restController.html#path-variable)
 
 ## Lifecycle Annotations
 
