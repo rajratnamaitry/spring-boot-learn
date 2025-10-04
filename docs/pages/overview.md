@@ -1,3 +1,6 @@
+---
+outline: deep
+---
 # Overview
 
 - Minimize the amount of manual configuration
@@ -225,6 +228,17 @@ Use `management.endpoints.web.exposure.include=*` to expose all endpoints
 spring.security.user.name=scott
 spring.security.user.password=tiger
 ```
+
+### Log SQL statements
+
+- Log sql statements
+- Log values for sql statements
+
+  ```java
+  # Hibernate ddl auto (create, create-drop, validate, update)
+  logging.level.org.hibernate.SQL=debug
+  logging.level.org.hibernate.orm.jdbc.bind=trace
+  ```
 
 ## WARNING
 

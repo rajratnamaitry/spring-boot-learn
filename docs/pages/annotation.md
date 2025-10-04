@@ -1,3 +1,6 @@
+---
+outline: deep
+---
 # Spring Boot Annotations
 
 ## Core Annotations
@@ -31,7 +34,9 @@
 - [`@Table`](./hibernate.html#setps)
 - [`@Id`](./hibernate.html#setps)
 - [`@GeneratedValue`](./hibernate.html#setps)
+- [`@Transactional`](./hibernate.html#transactional)
+- [`@Repository`](./hibernate.html#repository)
 
 :::tip
 Click on any annotation to see detailed documentation and examples
-:::
+::

@@ -18,6 +18,8 @@ export default defineConfig({
           { text: 'Overview', link: '/pages/overview' },
           { text: 'Rest Controller', link: '/pages/restController' },
           { text: 'Injector Type', link: '/pages/injectorType' },
+          { text: 'Hibernate', link: '/pages/hibernate' },
+          { text: 'Bean Scope', link: '/pages/beanScope' },
           { text: 'Annotation', link: '/pages/annotation' }
         ]
       }

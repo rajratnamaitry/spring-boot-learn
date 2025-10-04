@@ -1,4 +1,6 @@
-
+---
+outline: deep
+---
 # JPA (Java Persistence API)
 
 - Standard API for ORM
@@ -135,21 +137,111 @@ public class MyKartApplication {
 
 1. Define DAO interface
 
-```java
-
-```
+    ```java
+    //file:  StudentDao.java
+    public interface StudentDao {
+        void save(Student theStudent);
+    }
+    ```
 
 2. DAO implementation
+    - Define entity manager
+    - Set up constructor
+    - Use `entityManager`
 
-```java
-```
+    ```java
+
+    @Repository
+    public class StudentRepo implements StudentDao {
+        // Define entity manager
+        private EntityManager entityManager;
+
+        // Set up constructor injection
+        @Autowired
+        public StudentRepo(EntityManager theEntityManager) {
+            this.entityManager = theEntityManager;
+        }
+
+        @Override
+        @Transactional
+        public void save(Student theStudent) {
+            System.out.println("Student saved: " + theStudent);
+            this.entityManager.persist(theStudent);
+        }
+    }
+    ```
 
 ### @Transactional
 
 - Auto begin and end a transaction for JPA code
+- `@Transactional` for save,update,delete method only
 
 ### @Repository
 
 - Specialized annotation for repo
 - Supports component scanning
 - Translates JDBC expections
+- `@Repository` Its primary purpose is to manage data persistence and retrieval operations, typically interacting with a database.
+
+## JPQL
+
+- Similar in concept to SQL
+- Is based on entity name and entity fields
+
+### JPQL Named parameters
+
+- `theData` can be used as parameter
+
+```java
+    @Override
+    public Student findByLastName(String theLastName) {
+        TypedQuery<Student> theQuery = this.entityManager.createQuery("from Student where lastName=:theData", Student.class);
+        theQuery.setParameter("theData", theLastName);
+        List<Student> students = theQuery.getResultList();
+        if (students.size() == 0) {
+            return null;
+        }
+        return students.get(0);
+    }
+```
+
+### JPQL select clause
+
+- For JPQL, the "select" clause is required.
+
+```java
+    @Override
+    public List<Student> getAllStudent() {
+        TypedQuery<Student> theQuery = this.entityManager.createQuery("from Student order by firstName", Student.class);
+        return theQuery.getResultList();
+    }
+```
+
+## JPA Configuration
+
+- JPA/Hibernate will **drop** tables then **create** them
+- Based on the JPA/Hibernate annotations in your java code
+
+|Property|Description|
+|--|--|
+|none| No action |
+|create| Db tables are dropped first and then created |
+|create-drop|Db tables are dropped first and then created. on application shutdown, drop the db tables|
+|validate|Validate the db tables schema|
+|update| Update the database table schema|
+
+```properties
+spring.jpa.hibernate.ddl-auto=create
+```
+
+:::info
+if you want to create table once and keep the data, use:**update**
+however, will alter db scheme based on latest code update
+:::
+
+:::danger
+When db tables are dropped, all data is lost
+:::
+:::danger
+Dont use **create** on production db!!
+:::

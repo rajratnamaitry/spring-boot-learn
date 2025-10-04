@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Dependency Injection Types
 
 dependency resolution spring creats instance of `@Component` first then create instance of `@Controller` and inject the `@Component`

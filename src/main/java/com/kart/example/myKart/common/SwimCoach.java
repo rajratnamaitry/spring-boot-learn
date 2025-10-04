@@ -1,6 +1,6 @@
 package com.kart.example.myKart.common;
 
-import org.springframework.stereotype.Component;
+// import org.springframework.stereotype.Component;
 // Note: no annotation
 //@Component
 public class SwimCoach implements Coach{
