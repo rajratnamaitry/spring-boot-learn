@@ -17,8 +17,13 @@ outline: deep
 
 - [`@RestController`](./restController.html)
 - [`@GetMapping`](./restController.html#get-mapping)
+- [`@PostMapping`](./restController.html#get-mapping)
+- [`@PutMapping`](./restController.html#get-mapping)
+- [`@RequestBody`](./restController.html#get-mapping)
 - [`@RequestMapping`](./restController.html#request-mapping)
 - [`@PathVariable`](./restController.html#path-variable)
+- [`@ExceptionHandler`](./restController.html#exception-handler)
+- [`@ControllerAdvice`](./restController.html#global-exception-handler)
 
 ## Lifecycle Annotations
 

@@ -20,6 +20,7 @@ export default defineConfig({
           { text: 'Injector Type', link: '/pages/injectorType' },
           { text: 'Hibernate', link: '/pages/hibernate' },
           { text: 'Bean Scope', link: '/pages/beanScope' },
+          { text: 'Service', link: '/pages/service' },
           { text: 'Annotation', link: '/pages/annotation' }
         ]
       }

@@ -1,4 +1,4 @@
-package com.kart.example.myKart.dao;
+package com.kart.example.myKart.dao.student;
 import java.util.List;
 
 import com.kart.example.myKart.entity.Student;

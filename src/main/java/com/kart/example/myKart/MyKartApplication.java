@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.kart.example.myKart.dao.StudentDao;
+import com.kart.example.myKart.dao.student.StudentDao;
 import com.kart.example.myKart.entity.Student;
 
 @SpringBootApplication
